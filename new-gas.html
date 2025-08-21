@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Gas Guys  | Premium Gas Exchange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.istockphoto.com/id/1288462295/photo/different-types-of-gas-bottles-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=vRXxqyKKdXvMwl95WzOA6_1Q4ttYBsC4PX-GtiS0Htw=');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .tank-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .tank-feature:hover .feature-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-regular fa-fire-burner text-white text-xl"></i>
+                </div>
+                <h1 class="text-1xl font-bold text-blue-800">Team <span class="text-blue-500">Gas Guys</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 font-medium hover:text-blue-800 transition">Home</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-800 transition">Products</a>
+                <a href="#features" class="text-gray-600 hover:text-blue-800 transition">Features</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-800 transition">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-800 transition">Contact</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a onclick="sendWhatsAppMessage(+27602649681)" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition font-medium flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-600 font-medium">Home</a>
+                <a href="#products" class="text-gray-600">Products</a>
+                <a href="#features" class="text-gray-600">Features</a>
+                <a href="#about" class="text-gray-600">About Us</a>
+                <a href="#contact" class="text-gray-600">Contact</a>
+                <a onclick="sendWhatsAppMessage(+27602649681)" class="bg-green-600 text-white px-6 py-2 rounded-full text-center flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Premium Gas Exchange</h1>
+                <p class="text-xl mb-8">Need a quick and reliable gas refill? We?ve got you covered! Fast service, affordable prices, and safety you can trust. Whether it?s for home, business, or BBQs?we deliver convenience right to your doorstep. Call now and stay powered with our hassle-free gas refill service!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-center font-medium transition">Explore Products</a>
+                    <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-800 px-8 py-3 rounded-full text-center font-medium transition">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-800">2+</p>
+                    <p class="text-gray-600">Years in Business</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-800">1000+</p>
+                    <p class="text-gray-600">Tanks Installed</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-800">Affordable</p>
+                    <p class="text-gray-600">Delivery Fee</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-blue-800">24/7</p>
+                    <p class="text-gray-600">Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">We Do Gas Exchange</h2>
+               
+                <p class="text-gray-600 max-w-2xl mx-auto">Got an empty gas tank? No problem! We offer fast and easy gas exchange services. Just bring in your empty cylinder and swap it for a full one. Quick, safe, and hassle-free.
+                    
+                    </p>
+                <p class="text-gray-600 max-w-2xl mx-auto"> No waiting, no fuss. Keep your home or business running smoothly</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">visit us for your gas exchange today!</p>
+                
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="tank-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="https://images.ecatonline.co.za/EcatApi/Image?DisplayLarge=true&ImagePath=(PATHUPLOAD)/__upload/Cadac/Catalogue/images/5595-5kg-CADAC-Cylinder.jpg&MaxImageWidth=450&MaxImageHeigth=450" alt="5kg Gas Cylinder" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">5kg Cylinders (Refill)</h3>
+                        <p class="text-gray-600 mb-4">Looking for a compact, convenient gas solution? Our 5kg gas tank is perfect for small households, camping trips, or outdoor cooking. It?s lightweight, easy to carry, and lasts longer than you?d think. Safe, efficient, and affordable. Grab yours today and never run out when you need it most!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">From R190</span>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="tank-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="https://images.ecatonline.co.za/EcatAPI/Image?DisplayLarge=true&ImagePath=(PATHUPLOAD)\__upload\Cadac\Catalogue\images/5599-9kg-CADAC-Cylinder.jpg&MaxImageWidth=400&MaxImageHeigth=400" alt="9kg Gas Cylinder" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">9kg Cylinders (Refill)</h3>
+                        <p class="text-gray-600 mb-4">Need more fuel to keep your home or business running smoothly? Our 9kg gas cylinder is the perfect solution. It?s ideal for bigger households or small businesses, offering long-lasting power for cooking, heating, or hot water. Safe, reliable, and cost-effective. Grab yours today and never run low again!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">From R330</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="tank-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="https://images.ecatonline.co.za/EcatAPI/Image?DisplayLarge=true&ImagePath=(PATHUPLOAD)\__upload\Cadac\Catalogue\images/5515-15kg-CADAC-Cylinder.jpg&MaxImageWidth=400&MaxImageHeigth=400" alt="14kg Gas Cylinder" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">14kg Cylinders (Refill)</h3>
+                        <p class="text-gray-600 mb-4">For those who need extra power and reliability, our 14kg gas cylinder is the perfect choice! It?s designed for large families, restaurants, or workshops?providing ample fuel for cooking, heating, or any heavy-duty use. Durable, efficient, and long-lasting. Get yours now and enjoy peace of mind with every refill!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">From R510</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product 4 -->
+                <div class="tank-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="https://images.ecatonline.co.za/EcatAPI/Image?DisplayLarge=true&ImagePath=(PATHUPLOAD)\__upload\Cadac\Catalogue\images//4G4A1373%205550%2050Kg%20Cylinder%20(Single%20Valve).JPG&MaxImageWidth=400&MaxImageHeigth=400" alt="19kg Gas Cylinder" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">19kg Cylinders (Refill)</h3>
+                        <p class="text-gray-600 mb-4">When you need serious power, our 19kg gas cylinder is the go-to choice. Perfect for large households, businesses, or industrial use, it provides hours of reliable fuel for cooking, heating, or other heavy-duty needs. High capacity, durable, and safe?ensure your operations keep running smoothly. Get yours today!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">From R680</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+                     
+            
+            <div class="text-center mt-20">  
+            <p class="text-blue-600 max-w-12xl mx-auto">We also provide minor servicing and repairs on most gas appliances
+                  
+                    </p>
+                    </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition">Get Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Why Choose Team Gas Guys?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our gas tanks are designed with cutting-edge technology to provide the safest and most reliable storage solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="tank-feature bg-white p-6 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="feature-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 transition duration-300">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Triple-Layer Protection</h3>
+                    <p class="text-gray-600">Our proprietary 3-layer construction prevents leaks and corrosion for decades.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="tank-feature bg-white p-6 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="feature-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 transition duration-300">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Smart Monitoring</h3>
+                    <p class="text-gray-600">Optional IoT-enabled sensors provide real-time level and pressure monitoring.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="tank-feature bg-white p-6 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="feature-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 transition duration-300">
+                        <i class="fas fa-leaf text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Eco-Friendly</h3>
+                    <p class="text-gray-600">Made with 85% recycled materials and 100% recyclable at end of life.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="tank-feature bg-white p-6 rounded-lg shadow-md text-center transition duration-300">
+                    <div class="feature-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 transition duration-300">
+                        <i class="fas fa-tools text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Easy Maintenance</h3>
+                    <p class="text-gray-600">Designed with accessible inspection ports and cleaning systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Customers Say</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Trusted by businesses and homeowners across the country</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael R.</h4>
+                            <p class="text-blue-200 text-sm">Homeowner</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Our Team Gas Guys 19kg Gas Tank has been flawless for 2 years now. The installation team was professional and the tank requires virtually no maintenance."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah L.</h4>
+                            <p class="text-blue-200 text-sm">Restaurant Owner</p>
+                        </div>
+                    </div>
+                    <p class="italic">"We replaced our old propane tanks with Team Gas Guys commercial units. The difference in reliability and safety features is night and day. Highly recommend!"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-hard-hat text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">James T.</h4>
+                            <p class="text-blue-200 text-sm">Factory Manager</p>
+                        </div>
+                    </div>
+                    <p class="italic">"The industrial tanks we purchased from Team Gas Guys have exceeded our expectations. Their engineering team worked closely with us to customize the solution."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">About Team Gas Guys</h2>
+                    <p class="text-gray-600 mb-4">At Team Gas Guys, we?re dedicated to providing reliable, safe, and affordable gas solutions for homes, businesses, and everything in between. With years of experience in the industry, we specialize in hassle-free gas refills, exchanges, and deliveries?tailored to your needs. Whether you?re fueling your kitchen, heating your home, or running a business, we?ve got you covered.
+
+</p>
+                    <p class="text-gray-600 mb-6">We prioritize customer satisfaction and safety, ensuring you never run low when you need it most. Our fast, efficient service and competitive pricing make us the trusted choice for gas across Cape Town/Western Cape. Choose us for peace of mind, quality, and convenience.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-medal text-blue-600"></i>
+                            </div>
+                            <div>
+                               
+                                <h4 class="font-bold text-blue-800">Nationwide Service</h4>
+                                <p class="text-gray-600">Serving all areas within Cape Town </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Refill or Exchange Your Gas Storage?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contact our team today for a free consultation and quote tailored to your specific needs.</p>
+            
+             
+                  <button type="button" onclick="sendWhatsAppMessage(+27602649681)" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full font-medium transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                   </button>
+                </a>
+               
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-blue-800 text-white p-8 md:p-12">
+                            <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                            <p class="mb-8">Fill out the form or reach out to us directly using the information below.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Headquarters</h4>
+                                        <p>19 Jakaranda Road, High Places, Cape Town, 7100, South Africa</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Phone</h4>
+                                        <p>061 752 8531</p>
+                                        <p>Mon-Sun: 24/hours </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-700 ">
+                                        
+                                    </div>
+                                    <div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 p-8 md:p-12">
+                            <h2 class="text-2xl font-bold text-blue-800 mb-6">Get a Free Quote</h2>
+                            <form id="contactForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div>
+                                    <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                
+                                <div>
+                                    <label for="interest" class="block text-gray-700 mb-2">I'm interested in</label>
+                                    <select id="interest" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option value="">Select an option</option>
+                                        <option value="residential">5kg cylinder</option>
+                                        <option value="commercial">9kg cylinder</option>
+                                        <option value="industrial">14kg Cylinders</option>
+                                        <option value="other">19kg cylinder</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                </div>
+                                
+                                <button type="button" onclick="sendWhatsAppMessage(+27602649681)" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-full font-medium transition flex items-center justify-center">
+                                    <i class="fab fa-whatsapp mr-2"></i> Send via WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                           <i class="fas fa-regular fa-fire-burner text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Team <span class="text-blue-400">Gas Guys</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Premium gas storage solutions for residential, commercial, and industrial applications.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">5kg Gas Tanks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">9kg Gas Tanks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">14kg Gas Tanks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">19kg Gas Tanks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Servicing & Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Installation Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Safety Manuals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Maintenance Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">News & Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">? 2024 Team Gas Guys. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-8 left-8 z-50">
+        <a onclick="sendWhatsAppMessage()" class="bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // WhatsApp Message Function
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const interest = document.getElementById('interest').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Hi Team Gas Guys,\n\nI'm interested in your ${interest} service.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}\n\nPlease contact me.`;
+            
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/27602649681?text=${encodedMessage}`, '_blank');
+        }
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.tank-card, .tank-feature');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.tank-card, .tank-feature').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
